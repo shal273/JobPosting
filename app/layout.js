@@ -22,10 +22,10 @@ export default async function RootLayout({ children }) {
       <body className="antialiased overflow-y-auto scrollBarDash">
  
  
-          <ClientWrapper>
+          {/* <ClientWrapper> */}
               {children}
-          </ClientWrapper>  
-             {/* <div id="addModal"></div> */}
+          {/* </ClientWrapper>  
+             <div id="addModal"></div> */}
       </body>
     </html>
   );

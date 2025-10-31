@@ -2,9 +2,9 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
-import { signIn } from "next-auth/react";
-import { authAPI } from '@/app/lib/api/client'; // Import your authAPI
-import { logout } from "@/app/lib/actions/auth";
+// import { signIn } from "next-auth/react";
+// import { authAPI } from '@/app/lib/api/client'; // Import your authAPI
+// import { logout } from "@/app/lib/actions/auth";
 const VerifyOtpPage = () => {
   const inputsRef = useRef([]);
   const searchParams = useSearchParams();
