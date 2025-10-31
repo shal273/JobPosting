@@ -2,6 +2,7 @@
 import React , {useState} from 'react'
 import { Dropdown } from '@/app/Component/DropDown'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 const page = () => {
  const jobs = [
     {position: 'Blockchain Developer' , company: 'Onyx Technology' , parag: 'Authorization controls what users can do after authentication through three main models: RBAC assigns permissions to roles, ABAC uses attributes and context for fine-grained control, and ACL attaches permissions to individual resources. Real applications like GitHub and Stripe often combine these models.  ABAC uses attributes and context for fine-grained control, and ACL attaches permissions to individual resources. Real applications like GitHub and Stripe often combine these models....' , duration: 'Full Time' , Departmenr: 'Developoment' , Time: '24'},
@@ -19,14 +20,14 @@ const page = () => {
   const [page, setPage] = useState(1)
   const [View, setIsView] = useState(false)
   // Pagination setup: 4 cards per page
-  const perPage = 4
+  const perPage = 3
   const totalPages = Math.ceil(jobs.length / perPage)
   const startIndex = (page - 1) * perPage
   const currentJobs = jobs.slice(startIndex, startIndex + perPage)
 
   // Slide animation direction
   const [direction, setDirection] = useState(0)
-
+const router = useRouter()
 
     const toggleView = (position) => {
     setExpanded((prev) => ({
@@ -213,17 +214,110 @@ const page = () => {
                     </button>
                     </div>
                 </div>
-                <div className=' mt-16.25 border border-Error h-screen'>
+                <div className='flex flex-col gap-15.25 w-full mt-16.25  h-screen'>
                     <div className='between items-center '>
-                        <div className='flex items-center gap-3.75'>
-                            <img onClick={() => router.back()} src="/Icons/ArrowLeft.png" alt="Back" />
-                            <li className='textWhite list-decimal'>Blockchain Developer</li>
+                        <div className='flex flex-col items-center gap-3.75'>
+                            <div className='space-y-2.75'>
+                                <div className='flex gap-1.75'>
+                                    <img onClick={() => router.back()} src="/Icons/ArrowLeft.png" alt="Back" />
+                                    <h4 className='textWhite '>Blockchain Developer</h4>
+                                </div>
+                                <div className='flex items-center gap-3'>
+                                    <div className='w-[7px] h-[7px] bg-lemongreen rounded-full'></div>
+                                    <h4 className='text-limegray'>  Onyx Technology</h4>
+                                </div>
+                            </div>
+
                         </div>
                         <div>
                             <div className='flex gap-4.5 items-center'>
-                                <div><button className='w-28.75 h-10 rounded-[0.4375rem] text-center bg-lemongreen text-black   text-nowrap'>Apply Now </button></div>
-                                <div><button className='w-32.5 h-10 rounded-[0.4375rem] text-center bg-inherit text-formColor px-5.75 border border-limegray'>Save</button></div>
+                                <div><button className='w-45.75 h-12.5 rounded-[0.4375rem] text-center bg-lemongreen text-black   text-nowrap'>Apply Now </button></div>
+                                <div><button className='w-32.5 h-12.5 rounded-[0.4375rem] text-center bg-inherit text-formColor px-5.75 border border-limegray'>Save</button></div>
                             </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='flex flex-col gap-5'>
+                            <h4 className='font-medium text-formColor '>Job Descriptions</h4>
+                            <p className='text-limegray '>Authorization controls what users can do after authentication through three main models: RBAC assigns permissions to roles, ABAC uses attributes and context for fine-grained control, and ACL attaches permissions to individual resources. Real applications like GitHub and Stripe often combine these models. OAuth2 enables delegated authorization without sharing credentials, while JWTs and bearer tokens carry user identity and permissions across systems. The key is choosing the right combination of models and mechanisms based on your application's complexity and security requirements</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='flex flex-col gap-5'>
+                            <h4 className='font-medium text-formColor '>Role & Responsibilities</h4>
+                            <div className={` h-114 overflow-hidden transition-all duration-75 ease-in-out  ${View ? 'h-150 overflow-y-auto     scrollBarNav' : ''}`}  onClick={()=>setIsView(prev=>!prev)}>
+                                <div>
+                                    <p className='text-limegray  '>Designs and implements the core authorization models (RBAC, ABAC, ACL) to control user permissions within applications and systems.
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project.
+
+    Designs and implements the core authorization models (RBAC, ABAC, ACL) to control user permissions within applications and systems.
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project.
+
+    Designs and implements the core authorization models (RBAC, ABAC, ACL) to control user permissions within applications and systems.
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project.
+
+    Designs and implements the core authorization models (RBAC, ABAC, ACL) to control user permissions within applications and systems.
+
+    Architects hybrid authorization strategies that combine models like RBAC and ABAC to meet the specific security and complexity needs of the business, similar to implementations seen in platforms like GitHub and Stripe.
+
+    Integrates and manages delegated authorization protocols like OAuth2 to enable secure, third-party access without credential sharing.
+
+    Implements and secures token-based authentication and authorization flows, utilizing mechanisms such as JWTs and bearer tokens to carry user identity and permissions across distributed systems.
+
+    Evaluates security requirements and application complexity to select the optimal combination of authorization models and mechanisms for a given project.</p>
+
+                                </div>
+                            </div>
+                                    <div className='mx-auto'>
+                                        <h4 className={`${View ? 'text-limegray' : 'text-limeLight'} cursor-pointer  `} onClick={()=>setIsView(prev=>!prev)}>Read More</h4>
+                                    </div>
+                        </div>
+                    </div>
+                    <div className='flex gap-30.25'>
+                        <div className='space-y-4.5'>
+                            <h4 className='font-medium text-formColor'>Location</h4>
+                            <h4 className='text-limegray'>Addis Abeba</h4>
+                        </div>
+                        <div className='space-y-4.5'>
+                            <h4 className='font-medium text-formColor'>Posted Date</h4>
+                            <h4 className='text-limegray'>02-07-2025</h4>
                         </div>
                     </div>
                 </div>

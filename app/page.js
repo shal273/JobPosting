@@ -1,9 +1,8 @@
+import { redirect } from 'next/navigation'
 import React from 'react'
 
-const page = () => {
-  return (
-    <div className='text-white'>page</div>
-  )
+const page = () => {  
+  redirect("/NavBars/Home")
 }
 
 export default page

@@ -133,8 +133,7 @@ const page = () => {
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                 className='flex flex-col gap-5'>
                     {currentJobs.map((jobs) =>(
-                        <button key={jobs.position} onClick={()=>router.push("/NavBars/HomeDetail")} className='cursor-pointer'>
-                            <div className='rounded-[1.125rem]  space-y-5 w-full   py-6.25 pl-9.75 bg-[#11130c] px-9.5 '>
+                             <div key={jobs.position} onClick={()=>router.push("/NavBars/HomeDetail")} className='rounded-[1.125rem] cursor-pointer space-y-5 w-full   py-6.25 pl-9.75 bg-[#11130c] px-9.5 '>
                                 
                                 <div className='flex flex-col gap-7'>
                                     <div className='between   '>
@@ -162,7 +161,7 @@ const page = () => {
                                     <div className='bg-[rgba(124,128,111,0.07)] w-22.75 px-3.75 py-2.25 text-formColor rounded-[7px] text-nowrap'><h4>{jobs.Time} hours</h4></div>
                                 </div>
                             </div>
-                        </button>
+ 
                     ))}
 
                 </motion.div>
