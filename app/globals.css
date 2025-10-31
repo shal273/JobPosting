@@ -20,6 +20,7 @@ body {
   --color-yellowCust:#F7AB1E;
   --color-Error:#E3694A;
   --color-navColor:#6C6C6C;
+  --color-login:#737767;
   --color-bgColor:rgba(190, 229, 50, 0.05);
 }
 @layer utilities{
