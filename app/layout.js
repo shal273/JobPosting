@@ -2,7 +2,7 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import ClientWrapper from "./ClientWrapper";
-import LoginPage from "./Component/LoginPage";
+// import LoginPage from "./Component/LoginPage";
  
 
 const urbanist = Urbanist({
@@ -20,12 +20,12 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={urbanist.variable}>
       <body className="antialiased overflow-y-auto scrollBarDash">
-        <LoginPage/>
-        {children}
-          {/* <ClientWrapper>
+ 
+ 
+          <ClientWrapper>
               {children}
-          </ClientWrapper> */}
-            {/* <div id="addModal"></div> */}
+          </ClientWrapper>  
+             {/* <div id="addModal"></div> */}
       </body>
     </html>
   );

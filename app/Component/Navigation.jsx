@@ -15,9 +15,13 @@ const Navigation = ({readPath}) => {
                 <div className={`${readPath === 'NavBars/Saved' ? 'text-formColor' : ''}`}>
                     <Link href={"/NavBars/Saved"}  >Saved</Link>
                 </div>
+                <div className={`${readPath === 'NavBars/Applied' ? 'text-formColor' : ''}`}>
+                    <Link href={"/NavBars/Applied"}  >Applied</Link>
+                </div>
                 <div className={`${readPath === 'NavBars/Profile' ? 'text-formColor' : ''}`}>
                     <Link href={"/NavBars/Profile"}  >Profile</Link>
                 </div>
+    
             </div>
         </div>
     </div>

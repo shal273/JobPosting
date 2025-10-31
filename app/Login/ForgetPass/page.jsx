@@ -9,15 +9,15 @@ const page = () => {
     <div className='h-screen bg-[url(/images/Login.png)]  w-screen flex items-center justify-center  font-semibold'>
         {/* Login form */}
         <div className="w-163.5  relative">
-          <div className="border-[0.4px] border-graysh backdrop-blur-[0.3875rem] bg-[linear-gradient(109deg,rgba(27,31,14,0.05)_0%,rgba(136,136,136,0.01)_102.73%)] rounded-[29px] w-[659px] ">
-            <section className="flex flex-col gap-11.25 mt-[74px] mb-19.5 ml-[79px] mr-[79px]">
+          <div className="border-[0.4px] border-graysh backdrop-blur-[0.3875rem] bg-[linear-gradient(109deg,rgba(27,31,14,0.05)_0%,rgba(136,136,136,0.01)_102.73%)] rounded-[29px]   w-[659px] ">
+            <section className="flex flex-col gap-11.25 mt-15.75 mb-17.75 mx-19.75">
               <div className="flex flex-col gap-3">
                 <h1 className="text-formColor text-2xl">Forgot password?</h1>
                 <h4 className="text-login ">Enter your details to receive a rest link </h4>
               </div>
 
               {/* Form */}
-              <form  className="flex flex-col gap-19">
+              <form  className="flex flex-col gap-11.25">
                 {/* Email */}
                 <div className="flex flex-col gap-3">
                   <label className="text-white">Email</label>
