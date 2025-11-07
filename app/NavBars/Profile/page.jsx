@@ -1,9 +1,14 @@
-import React from 'react'
+// app/Admin/EmployeeView/[employeeID]/page.jsx
+import { auth } from '@/app/auth';
+import { hrmsAPI } from '@/app/lib/api/client';
+import ProfileView from './ProfileView/page';
 
-const page = () => {
-  return (
-    <div className='text-yellowCust'>page</div>
-  )
+export default async function EmployeesServerPage() {
+ 
+ 
+  const session = await auth();
+  const token = session?.accessToken;
+ 
+ 
+  return <ProfileView session={session || []} />;
 }
-
-export default page

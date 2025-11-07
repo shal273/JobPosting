@@ -1,10 +1,44 @@
 @import 'tailwindcss';
 
 
-body {
-  font-family: var(--font-urbanist), system-ui, sans-serif;
+:root {
+  font-family: 'Urbanist', system-ui, sans-serif;
   background-color: black;
 }
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist/Urbanist-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist/Urbanist-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist/Urbanist-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist/Urbanist-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 
 @theme{

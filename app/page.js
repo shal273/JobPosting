@@ -1,8 +1,10 @@
-import { redirect } from 'next/navigation'
-import React from 'react'
+import { redirect } from 'next/navigation';
+import { auth } from '@/app/auth'; // server-side auth
 
-const page = () => {  
-  redirect("/NavBars/Home")
+export default async function Home() {
+  const session = await auth();
+
+  if (!session) {
+    redirect('/Login');
+  }
 }
-
-export default page
