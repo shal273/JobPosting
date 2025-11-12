@@ -16,7 +16,11 @@ const page = ({jobs}) => {
   // Slide animation direction
   const [direction, setDirection] = useState(0)
 
+  // const handleApply = async (data) {
 
+  // }
+
+  
   const nextPage = () => {
     if (page < totalPages) {
       setDirection(1)
@@ -121,7 +125,7 @@ const page = ({jobs}) => {
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                 className='flex flex-col gap-5'>
                     {currentJobs.map((jbs) =>(
-                             <div key={jbs.id} onClick={()=>router.push(`/NavBars/HomeDetail/${jbs.id}`)} className='rounded-[1.125rem] cursor-pointer space-y-5 w-full   py-6.25 pl-9.75 bg-[#11130c] px-9.5 '>
+                             <div key={jbs.id} onClick={()=>router.push(`/NavBars/HomeDetail/${jbs.id}`)} className='rounded-[1.125rem] cursor-pointer space-y-5 w-full relative   py-6.25 pl-9.75 bg-[#11130c] px-9.5 '>
                                 
                                 <div className='flex flex-col gap-7'>
                                     <div className='between   '>
@@ -132,9 +136,9 @@ const page = ({jobs}) => {
                                                 <h4 className='text-[14px] text-limegray font-regular' >{jbs.organizationOrTenant}</h4>
                                             </div>
                                         </div>
-                                        <div>
+                                        <div className='border border-Error bg-red absolute z-10 right-9.5'>
                                             <div className='flex gap-4.5 items-center'>
-                                                <div><button className='w-28.75 h-10 rounded-[0.4375rem] text-center bg-lemongreen text-black   text-nowrap'>Apply Now </button></div>
+                                                <div><button className='w-28.75 h-10 rounded-[0.4375rem] text-center bg-lemongreen text-black   text-nowrap cursor-grab z-10'  onClick={(e)=> { e.stopPropagation(); router.push('/Apply');}}>Apply Now </button></div>
                                                 <div><button className='w-32.5 h-10 rounded-[0.4375rem] text-center bg-inherit text-formColor px-5.75 border border-limegray'>Save</button></div>
                                             </div>
                                         </div>
